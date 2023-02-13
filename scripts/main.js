@@ -17,10 +17,13 @@ myImage.onclick = () => {
     myHeader.textContent = `Hello my name is ${myName}`;
   }
 
-  if(!localStorage.setItem()){
-    setUserName;
-    else(){
-      const storedNamed =  localStorage.getItem("name");
-      myHeader.textContent = `Hello my name is ${myName}`
+  if(!localStorage.getItem("name")) {
+    setUserName();
+  } else {
+      const storedNamed = localStorage.getItem("name");
+      myHeader.textContent = `Hello my name is ${myName}`;
     }
-  }
+  
+    myButton.onclick = () => {
+        setUserName();
+    };
