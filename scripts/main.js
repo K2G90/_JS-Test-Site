@@ -7,3 +7,12 @@ myImage.onclick = () => {
       myImage.setAttribute("src", "images/black-panther-wakanda-king-2020-0c-2880x1800.jpeg");
     }
   };
+
+  let myButton = document.querySelector("button");
+  let myHeader = document.querySelector("h1");
+  
+  function setUserName(){
+    const myName = prompt("Please enter you name.");
+    localStorage.setItem("name", myName);
+    myHeader.textContent(`Hello my name is ${myName}`);
+  }
