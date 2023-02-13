@@ -14,5 +14,5 @@ myImage.onclick = () => {
   function setUserName(){
     const myName = prompt("Please enter you name.");
     localStorage.setItem("name", myName);
-    myHeader.textContent(`Hello my name is ${myName}`);
+    myHeader.textContent = `Hello my name is ${myName}`;
   }
