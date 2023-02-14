@@ -23,3 +23,6 @@ myImage.onclick = () => {
     const storedName = localStorage.getItem("name");
     myHeader.textContent = `Hello my name is, ${storedName}`;
   }
+  myButton.onclick = () => {
+    setUserName();
+  }
