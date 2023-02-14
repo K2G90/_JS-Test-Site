@@ -13,8 +13,12 @@ myImage.onclick = () => {
   
   function setUserName(){
     const myName = prompt("Please enter you name.");
+    if(!myName){
+        setUserName();
+    } else {
     localStorage.setItem("name", myName);
     myHeader.textContent = `Hello my name is ${myName}`;
+    }
   }
 
   if(!localStorage.getItem("name")) {
@@ -23,7 +27,7 @@ myImage.onclick = () => {
       const storedNamed = localStorage.getItem("name");
       myHeader.textContent = `Hello my name is ${myName}`;
     }
-  
+//   Runs function to reset name
     myButton.onclick = () => {
         setUserName();
-    };
+    }
