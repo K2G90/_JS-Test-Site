@@ -13,6 +13,7 @@ myImage.onclick = () => {
   
   function setUserName( ) {
     const myName = prompt("Please enter your name.");
+    // if there is no name it will prompt the user for a name
     if(!myName){
       setUserName();
     } else{
@@ -28,6 +29,7 @@ myImage.onclick = () => {
     const storedName = localStorage.getItem("name");
     myHeader.textContent = `Hello my name is, ${storedName}`;
   }
+  // button has an event listener to carry out function 
   myButton.onclick = () => {
     setUserName();
   }
